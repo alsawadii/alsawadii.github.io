@@ -1,4 +1,51 @@
-/* General setup */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+   /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
 
 * {
     box-sizing: border-box;
@@ -68,149 +115,68 @@ header, footer {
   border-bottom: .125rem solid #33658A;
 }
 
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
 
 
 
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
 
-
-
-/* Imported Typfaces */
-
-
-
-@font-face{
-    
-    font-family: josefinslab;
-    src: url("../font/josefinslab-regular.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
+{ 
+box-sizing: border-box;
 }
-
-@font-face {
-    font-family: "montserrat";
-    src: url("../font/montserrat-regular.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* Typography Styles */
 
 html {
-    font-family: josefinslab, Garamond, serif;
-    letter-spacing: 0.125rem;
-    font-size: 3.75rem;
-    margin: 1.125rem;
-    text-align: center;
+    font-size: 16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width: 56.25rem;
+}
+
+/* Layout */
+
+.main-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1.25rem;
 }
 
 
-h1 {
-    font-family: montserrat, Arial, sans-serif;
+article {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 3/4;
+    grid-row: 1;
+    border-left: 1px solid black;
+    padding-left: 1rem;
+}
+
+.subsection {
+    display: flex;
 }
 
 
-h2 {
-    font-family: josefinslab, Garamond, serif;
-    letter-spacing: 0.125rem;
-    font-size: 1.5rem; 
-}
+/* Links and Navigation */
 
-h2 + p {
-    text-indent: 1.5rem;
-}
-
-p {
-    font-size: 0.75rem;
-    letter-spacing: .03125rem;
-    word-spacing: 0.125rem;
-}
-
-li {
-    font-size: 0.75rem;
-    letter-spacing: .03125rem;
-    word-spacing: 0.125rem;
-}
-
-
-figcaption {
-    font-size: 0.75rem;
-    margin-bottom: 2rem;
-}
-
-/* Link Styling */
-
-a {
-   text-decoration: none;
-   outline: none;
-}
-
-a:link, a:visited {
-    color: #33658a;
-}
-
-a:focus, a:hover {
-    text-decoration: none;
-}
-
-
-
-/* List Styling */
-
-ul {
-    margin 1rem 0;
-    list-style-type: square;
-}
-
-ol {
-    margin: 1rem 0;
-    list-style-type: lower-alpha;
-}
-
-.long-list a:hover {
-    text-transform: uppercase;
-}
-
-
-/* Navigation Menu */
-
-nav {
-    padding-left: 0;
-    margin-top: .25rem;
-    width: 100%
-}
-
-nav a {
+nav a{
     display: inline-block;
-    line-height: 3;
-    text-align: center;
-    font-size: 1.125rem;
-    margin-bottom:  1.5rem;
-    border: 1px solid #33658A;
-}
-
-nav a:focus, nav a:hover {
-    color: #ffffff;
-    background-color: #33658A;
-}
-
-nav a:active {
-    color: #ffffff;
-    background-color: #000000;
+    padding: 1.25rem 2rem;
 }
 
 
-/* Footer Styles */
+/* Images and Figures */
 
-footer {
-    text-align: center;
+
+img {
+    width: 75%;
 }
 
 
-
+.article-imag {
+    width:33%
+    float: left
+}
 
